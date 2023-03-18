@@ -1,6 +1,9 @@
 #启动文件
 import sys
-sys.path.append('..')
+import os
+curPath = os.path.abspath(os.path.dirname(__file__))
+rootPath = os.path.abspath(os.path.dirname(curPath) + os.path.sep + ".")
+sys.path.append(rootPath)
 from test_function import web_test #导入函数文件
 from test_data import test_data #导入数据文件
 from selenium import webdriver
